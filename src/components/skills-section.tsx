@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, easeInOut } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
@@ -93,7 +93,7 @@ export function SkillsSection() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: easeInOut,
       },
     },
   }
@@ -104,7 +104,7 @@ export function SkillsSection() {
       width: `${level}%`,
       transition: {
         duration: 1.5,
-        ease: "easeOut",
+        ease: easeInOut,
         delay: 0.5,
       },
     }),
@@ -123,7 +123,7 @@ export function SkillsSection() {
           transition={{
             duration: 6,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
+            ease: easeInOut,
           }}
         />
         <motion.div
@@ -135,7 +135,7 @@ export function SkillsSection() {
           transition={{
             duration: 7,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
+            ease: easeInOut,
           }}
         />
       </div>
