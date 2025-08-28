@@ -1,26 +1,229 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Updated to futuristic dark theme with neon accents */
+  --background: oklch(0.08 0 0); /* #121212 - Dark background */
+  --foreground: oklch(1 0 0); /* #ffffff - White text */
+  --card: oklch(0.08 0.02 240 / 0.1); /* Glassmorphic card background */
+  --card-foreground: oklch(1 0 0); /* White card text */
+  --popover: oklch(0.08 0.02 240 / 0.2); /* Glassmorphic popover */
+  --popover-foreground: oklch(1 0 0); /* White popover text */
+  --primary: oklch(0.7 0.15 195); /* #00bcd4 - Primary cyan */
+  --primary-foreground: oklch(1 0 0); /* White text on primary */
+  --secondary: oklch(0.65 0.12 210); /* #03a9f4 - Secondary blue neon */
+  --secondary-foreground: oklch(1 0 0); /* White text on secondary */
+  --muted: oklch(1 0 0 / 0.5); /* Muted white text */
+  --muted-foreground: oklch(1 0 0); /* White muted text */
+  --accent: oklch(0.75 0.18 185); /* #00e5ff - Accent neon cyan */
+  --accent-foreground: oklch(0.08 0 0); /* Dark text on accent */
+  --destructive: oklch(0.6 0.25 15); /* #ff1744 - Destructive red */
+  --destructive-foreground: oklch(1 0 0); /* White text on destructive */
+  --border: oklch(1 0 0 / 0.3); /* Semi-transparent white border */
+  --input: oklch(1 0 0 / 0.1); /* Semi-transparent input background */
+  --ring: oklch(0.7 0.15 195 / 0.5); /* Cyan focus ring */
+  --chart-1: oklch(0.7 0.15 195); /* Chart cyan */
+  --chart-2: oklch(0.65 0.12 210); /* Chart blue */
+  --chart-3: oklch(0.75 0.18 185); /* Chart neon cyan */
+  --chart-4: oklch(0.7 0.15 195); /* Chart cyan variant */
+  --chart-5: oklch(0.65 0.12 210); /* Chart blue variant */
+  --radius: 0.5rem; /* Corner rounding */
+  --sidebar: oklch(0.12 0.02 240); /* #1e1e2f - Sidebar background */
+  --sidebar-foreground: oklch(1 0 0); /* White sidebar text */
+  --sidebar-primary: oklch(0.7 0.15 195); /* Cyan sidebar primary */
+  --sidebar-primary-foreground: oklch(1 0 0); /* White sidebar primary text */
+  --sidebar-accent: oklch(0.65 0.12 210); /* Blue sidebar accent */
+  --sidebar-accent-foreground: oklch(0.08 0 0); /* Dark sidebar accent text */
+  --sidebar-border: oklch(1 0 0 / 0.3); /* Semi-transparent sidebar border */
+  --sidebar-ring: oklch(0.7 0.15 195 / 0.5); /* Cyan sidebar focus ring */
+}
+
+.dark {
+  /* Dark mode uses same values as root for consistent dark theme */
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(1 0 0);
+  --card: oklch(0.08 0.02 240 / 0.1);
+  --card-foreground: oklch(1 0 0);
+  --popover: oklch(0.08 0.02 240 / 0.2);
+  --popover-foreground: oklch(1 0 0);
+  --primary: oklch(0.7 0.15 195);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.65 0.12 210);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(1 0 0 / 0.5);
+  --muted-foreground: oklch(1 0 0);
+  --accent: oklch(0.75 0.18 185);
+  --accent-foreground: oklch(0.08 0 0);
+  --destructive: oklch(0.6 0.25 15);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(1 0 0 / 0.3);
+  --input: oklch(1 0 0 / 0.1);
+  --ring: oklch(0.7 0.15 195 / 0.5);
+  --chart-1: oklch(0.7 0.15 195);
+  --chart-2: oklch(0.65 0.12 210);
+  --chart-3: oklch(0.75 0.18 185);
+  --chart-4: oklch(0.7 0.15 195);
+  --chart-5: oklch(0.65 0.12 210);
+  --sidebar: oklch(0.12 0.02 240);
+  --sidebar-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.7 0.15 195);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.65 0.12 210);
+  --sidebar-accent-foreground: oklch(0.08 0 0);
+  --sidebar-border: oklch(1 0 0 / 0.3);
+  --sidebar-ring: oklch(0.7 0.15 195 / 0.5);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Added gradient background for futuristic effect */
+    background: linear-gradient(135deg, oklch(0.08 0 0) 0%, oklch(0.12 0.02 240) 100%);
+    min-height: 100vh;
+    /* Added smooth scrolling behavior */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  /* Added glassmorphism utility classes */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Added neon glow effects */
+  .neon-glow {
+    box-shadow: 0 0 20px oklch(0.7 0.15 195 / 0.5);
+  }
+
+  .neon-glow-hover:hover {
+    box-shadow: 0 0 30px oklch(0.7 0.15 195 / 0.8), 0 0 60px oklch(0.7 0.15 195 / 0.4);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .neon-border {
+    border: 1px solid oklch(0.7 0.15 195);
+    box-shadow: 0 0 10px oklch(0.7 0.15 195 / 0.3);
+  }
+
+  .neon-text {
+    color: oklch(0.75 0.18 185);
+    text-shadow: 0 0 10px oklch(0.75 0.18 185 / 0.5);
+  }
+
+  /* Added enhanced button ripple effects */
+  .ripple-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple-effect::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .ripple-effect:active::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Added selection styling */
+  ::selection {
+    background: oklch(0.7 0.15 195 / 0.3);
+    color: oklch(1 0 0);
+  }
+
+  /* Added scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: oklch(0.08 0 0);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.7 0.15 195 / 0.5);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.7 0.15 195 / 0.8);
+  }
+
+  /* Added focus visible improvements */
+  *:focus-visible {
+    outline: 2px solid oklch(0.7 0.15 195);
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+#__next-build-watcher,
+#__next-prerender-indicator {
+  display: none !important;
+}
+
+nextjs-portal {
+  display: none !important;
 }
