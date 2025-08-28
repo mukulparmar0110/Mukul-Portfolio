@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { motion, useInView, easeInOut } from "framer-motion"
 import { useRef, memo, useMemo, useCallback } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -121,7 +121,7 @@ export const ProjectsSection = memo(function ProjectsSection() {
         y: 0,
         transition: {
           duration: 0.6,
-          ease: "easeOut",
+          ease: easeInOut,
         },
       },
     }),

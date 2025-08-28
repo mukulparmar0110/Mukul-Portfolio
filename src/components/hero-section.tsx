@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, easeInOut } from "framer-motion"
 import { ArrowDown, Download, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { TypewriterText } from "@/components/typewriter-text"
@@ -31,7 +31,7 @@ export const HeroSection = memo(function HeroSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: easeInOut },
     },
   }
 
@@ -105,7 +105,7 @@ export const HeroSection = memo(function HeroSection() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               variants={itemVariants}
             >
-              <GlowingButton variant="primary" size="lg" className="group" aria-label="Contact me via email">
+              <GlowingButton variant="default" size="lg" className="group" aria-label="Contact me via email">
                 <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
                 Get In Touch
               </GlowingButton>
