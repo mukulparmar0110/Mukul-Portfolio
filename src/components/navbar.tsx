@@ -46,7 +46,9 @@ export const Navbar = memo(function Navbar() {
 
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
