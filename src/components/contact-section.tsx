@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { motion } from "framer-motion"
+import { motion, easeInOut } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef, useState, useCallback, useMemo } from "react"
 import { Card, CardContent } from "@/components/ui/card"
@@ -155,7 +155,7 @@ export function ContactSection() {
         y: 0,
         transition: {
           duration: 0.6,
-          ease: "easeOut",
+          ease: easeInOut,
         },
       },
     }),
@@ -175,7 +175,7 @@ export function ContactSection() {
           transition={{
             duration: 8,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
+            ease: "linear" as any
           }}
         />
         <motion.div
@@ -187,7 +187,7 @@ export function ContactSection() {
           transition={{
             duration: 6,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
+            ease: "linear" as any
           }}
         />
       </div>
@@ -376,7 +376,7 @@ export function ContactSection() {
 
                     <GlowingButton
                       type="submit"
-                      variant="primary"
+                      variant="default"
                       size="lg"
                       disabled={isSubmitting}
                       className="w-full group"

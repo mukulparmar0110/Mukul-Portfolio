@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { motion, useInView, easeInOut } from "framer-motion"
 import { useRef, memo, useMemo } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -72,7 +72,7 @@ export const AboutSection = memo(function AboutSection() {
         y: 0,
         transition: {
           duration: 0.6,
-          ease: "easeOut",
+          ease: easeInOut,
         },
       },
     }),
@@ -92,7 +92,7 @@ export const AboutSection = memo(function AboutSection() {
           transition={{
             duration: 6,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
+            ease: [0.42, 0, 0.58, 1],
           }}
         />
       </div>
