@@ -91,14 +91,15 @@ export const HeroSection = memo(function HeroSection() {
 
             <motion.div className="mb-8 text-xl md:text-2xl text-muted-foreground" variants={itemVariants}>
               <TypewriterText
-                texts={["Full-Stack Developer", "UI/UX Designer", "Tech Innovator", "Problem Solver"]}
+                texts={["UI/UX Designer", "SaaS Designer", "Prompt Engineer", "Frontend Developer"]}
                 delay={1000}
               />  
             </motion.div>
 
             <motion.p className="text-lg text-muted-foreground mb-8 max-w-2xl text-pretty" variants={itemVariants}>
-              Crafting digital experiences with cutting-edge technology and innovative design. Specializing in modern
-              web applications that push the boundaries of what's possible.
+              Design, for me, is the perfect balance between aesthetic elegance and functional clarity. 
+              I don’t just place pixels; I craft purposeful experiences where visuals meet usability. 
+              Every screen I design is a journey — intuitive, engaging, and meaningful.
             </motion.p>
 
             <motion.div
@@ -110,10 +111,10 @@ export const HeroSection = memo(function HeroSection() {
                 Get In Touch
               </GlowingButton>
 
-              <GlowingButton variant="secondary" size="lg" className="group" aria-label="Download my CV">
+              {/* <GlowingButton variant="secondary" size="lg" className="group" aria-label="Download my CV">
                 <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
                 Download CV
-              </GlowingButton>
+              </GlowingButton> */}
             </motion.div>
           </motion.div>
 

@@ -14,29 +14,30 @@ export const ProjectsSection = memo(function ProjectsSection() {
   const projects = useMemo(
     () => [
       {
-        id: "ai-dashboard",
-        title: "AI-Powered Dashboard",
+        id: "Meshwari Visuals",
+        title: "Maheshwari Visuals – Music Distribution SaaS Based Web App",
         description:
-          "A comprehensive analytics dashboard with real-time data visualization and AI-driven insights for business intelligence.",
-        image: "/card1.webp",
-        tech: ["Next.js", "TypeScript", "D3.js", "OpenAI API", "PostgreSQL"],
+          "Maheshwari Visuals is a SaaS-based web app that connects artists and singers with platforms like Spotify and Apple Music, making music distribution seamless and efficient.",
+        
+          image: "/card1.webp",
+        tech: ["Figma", "TypeScript", "D3.js", "OpenAI API", "PostgreSQL"],
         category: "Web Application",
         links: {
-          demo: "#",
+          demo: "https://www.figma.com/design/P5entoo6ou7kggGqZbvcMs/Maheshwari-Fresh?node-id=0-1&t=zgJ5JLNvwo08UgUX-1",
           github: "#",
           live: "#",
         },
       },
       {
-        id: "ecommerce-platform",
-        title: "E-Commerce Platform",
+        id: "Tiffix",
+        title: "Tiffix – Food Delivery SaaS Based App",
         description:
-          "Modern e-commerce solution with advanced filtering, payment integration, and inventory management system.",
+          "A SaaS-based platform that connects home chefs, vendors, and customers for subscription-based meal delivery.",
         image: "/card2.webp",
-        tech: ["React", "Node.js", "Stripe", "MongoDB", "Redis"],
+        tech: ["Figma", "Adobe XD", "Lovable"],
         category: "Full-Stack",
         links: {
-          demo: "#",
+          demo: "https://www.figma.com/design/5D3ZjX2I9KWoZnGkazfjCZ/Tiffix-Fresh?node-id=0-1&t=YxR87Z82mulIw4D2-1",
           github: "#",
           live: "#",
         },
@@ -173,9 +174,9 @@ export const ProjectsSection = memo(function ProjectsSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Featured <span className="neon-text">Projects</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            A showcase of innovative solutions I've built, ranging from AI-powered applications to blockchain platforms.
-            Each project represents a unique challenge solved with cutting-edge technology.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto text-pretty">
+            A collection of my best works, showcasing how I combine creativity, usability, and 
+            problem-solving to design impactful digital experiences across websites, mobile apps, and SaaS products.
           </p>
         </motion.div>
 
@@ -228,6 +229,26 @@ export const ProjectsSection = memo(function ProjectsSection() {
 
                   <div className="flex gap-2" role="group" aria-label="Project actions">
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                     <Button
+                       size="sm"
+                       variant="ghost"
+                       className="neon-glow-hover flex-1"
+                       asChild
+                     >
+                       <a
+                         href={project.links.demo}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         aria-label={`View demo of ${project.title}`}
+                         className="flex items-center"
+                       >
+                         <Play className="w-4 h-4 mr-2" aria-hidden="true" />
+                         View
+                       </a>
+                     </Button>
+                    </motion.div>
+
+                    {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                       <Button
                         size="sm"
                         variant="ghost"
@@ -236,10 +257,10 @@ export const ProjectsSection = memo(function ProjectsSection() {
                         aria-label={`View demo of ${project.title}`}
                       >
                         <Play className="w-4 h-4 mr-2" aria-hidden="true" />
-                        Demo
+                        View
                       </Button>
-                    </motion.div>
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    </motion.div> */}
+                    {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                       <Button
                         size="sm"
                         variant="ghost"
@@ -249,7 +270,7 @@ export const ProjectsSection = memo(function ProjectsSection() {
                       >
                         <Github className="w-4 h-4" aria-hidden="true" />
                       </Button>
-                    </motion.div>
+                    </motion.div> */}
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                       <Button
                         size="sm"

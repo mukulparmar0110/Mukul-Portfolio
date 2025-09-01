@@ -12,37 +12,28 @@ export const AboutSection = memo(function AboutSection() {
 
   const timelineData = useMemo(
     () => [
-      {
-        year: "2024",
-        title: "Senior Full-Stack Developer",
-        company: "Tech Innovations Inc.",
-        description:
-          "Leading development of cutting-edge web applications using Next.js, React, and modern cloud technologies.",
-        icon: <Rocket className="w-6 h-6" aria-hidden="true" />,
-        skills: ["Next.js", "TypeScript", "AWS", "Docker"],
+       {
+        year: "2025",
+        title: "UI/UX Designer",
+        company: "FutureDesk Services",
+        description: "Designed user-centered digital experiences and prototyped innovative interface solutions.",
+        icon: <Lightbulb className="w-6 h-6" aria-hidden="true" />,
+        skills: ["Figma", "Adobe XD", "Canva", "SaaS App", "Prototyping", "User Research"],
       },
       {
-        year: "2022",
+        year: "2024",
         title: "Frontend Developer",
-        company: "Digital Solutions Co.",
+        company: "Nestlytics",
         description:
           "Specialized in creating responsive, accessible user interfaces with focus on performance optimization.",
         icon: <Code className="w-6 h-6" aria-hidden="true" />,
-        skills: ["React", "Vue.js", "Tailwind CSS", "GraphQL"],
+        skills: ["Flutter","React", "HTML", "CSS"],
       },
       {
-        year: "2020",
-        title: "UI/UX Designer",
-        company: "Creative Agency",
-        description: "Designed user-centered digital experiences and prototyped innovative interface solutions.",
-        icon: <Lightbulb className="w-6 h-6" aria-hidden="true" />,
-        skills: ["Figma", "Adobe XD", "Prototyping", "User Research"],
-      },
-      {
-        year: "2019",
-        title: "Computer Science Graduate",
-        company: "University of Technology",
-        description: "Graduated with honors, specializing in software engineering and human-computer interaction.",
+        year: "2023 to 2027",
+        title: "Pursuing Bachelor of Computer Science",
+        company: "DR. Bhimrao Ambedkar University",
+        description: "Pursuing a Bachelor of Computer Science with a passion for UI/UX, development, and creating meaningful digital experiences.",
         icon: <Users className="w-6 h-6" aria-hidden="true" />,
         skills: ["Algorithms", "Data Structures", "Software Engineering", "HCI"],
       },
@@ -107,10 +98,10 @@ export const AboutSection = memo(function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             About <span className="neon-text">Me</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            Passionate developer with 5+ years of experience crafting digital solutions that blend creativity with
-            cutting-edge technology. I believe in building not just applications, but experiences that inspire and
-            empower users.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto text-pretty">
+            I’m a UI/UX Designer passionate about crafting digital experiences that are not just functional but also delightful. 
+            Over the past few years, I’ve designed 20+ projects ranging from websites and mobile applications to SaaS-based platforms. 
+            My approach is rooted in user-centric design, blending creativity with usability to solve real-world problems.
           </p>
         </motion.div>
 
@@ -130,7 +121,7 @@ export const AboutSection = memo(function AboutSection() {
                     <Zap className="w-8 h-8 text-primary" aria-hidden="true" />
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold neon-text mb-2">50+</h3>
+                <h3 className="text-3xl font-bold neon-text mb-2">30+</h3>
                 <p className="text-muted-foreground">Projects Completed</p>
               </CardContent>
             </Card>
@@ -144,7 +135,7 @@ export const AboutSection = memo(function AboutSection() {
                     <Users className="w-8 h-8 text-secondary" aria-hidden="true" />
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold neon-text mb-2">25+</h3>
+                <h3 className="text-3xl font-bold neon-text mb-2">20+</h3>
                 <p className="text-muted-foreground">Happy Clients</p>
               </CardContent>
             </Card>
@@ -158,7 +149,7 @@ export const AboutSection = memo(function AboutSection() {
                     <Calendar className="w-8 h-8 text-accent" aria-hidden="true" />
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold neon-text mb-2">5+</h3>
+                <h3 className="text-3xl font-bold neon-text mb-2">2+</h3>
                 <p className="text-muted-foreground">Years Experience</p>
               </CardContent>
             </Card>
@@ -231,7 +222,8 @@ export const AboutSection = memo(function AboutSection() {
         </motion.div>
 
         {/* Personal Philosophy */}
-        <motion.div
+        
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -239,7 +231,7 @@ export const AboutSection = memo(function AboutSection() {
         >
           <Card className="glass-card neon-border max-w-4xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 neon-text">My Philosophy</h3>
+              <h3 className="text-2xl font-bold mb-4 neon-text"> What I Do</h3>
               <blockquote className="text-lg text-muted-foreground text-pretty leading-relaxed">
                 "Technology should be invisible, intuitive, and empowering. I strive to create digital experiences that
                 not only solve problems but inspire users to achieve more than they thought possible. Every line of code
@@ -247,7 +239,7 @@ export const AboutSection = memo(function AboutSection() {
               </blockquote>
             </CardContent>
           </Card>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )
