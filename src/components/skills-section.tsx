@@ -5,6 +5,8 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+
+
 import {
   Code2,
   Database,
@@ -37,32 +39,32 @@ export function SkillsSection() {
         { name: "Three.js", level: 78, icon: "🎮" },
       ],
     },
+    // {
+    //   title: "Backend Development",
+    //   icon: <Server className="w-6 h-6" />,
+    //   color: "secondary",
+    //   skills: [
+    //     { name: "Node.js", level: 88, icon: "🟢" },
+    //     { name: "Python", level: 85, icon: "🐍" },
+    //     { name: "GraphQL", level: 82, icon: "🔗" },
+    //     { name: "REST APIs", level: 90, icon: "🌐" },
+    //     { name: "Microservices", level: 80, icon: "🔧" },
+    //   ],
+    // },
+    // {
+    //   title: "Database & Cloud",
+    //   icon: <Database className="w-6 h-6" />,
+    //   color: "accent",
+    //   skills: [
+    //     { name: "PostgreSQL", level: 87, icon: "🐘" },
+    //     { name: "MongoDB", level: 83, icon: "🍃" },
+    //     { name: "AWS", level: 85, icon: "☁️" },
+    //     { name: "Docker", level: 88, icon: "🐳" },
+    //     { name: "Redis", level: 80, icon: "🔴" },
+    //   ],
+    // },
     {
-      title: "Backend Development",
-      icon: <Server className="w-6 h-6" />,
-      color: "secondary",
-      skills: [
-        { name: "Node.js", level: 88, icon: "🟢" },
-        { name: "Python", level: 85, icon: "🐍" },
-        { name: "GraphQL", level: 82, icon: "🔗" },
-        { name: "REST APIs", level: 90, icon: "🌐" },
-        { name: "Microservices", level: 80, icon: "🔧" },
-      ],
-    },
-    {
-      title: "Database & Cloud",
-      icon: <Database className="w-6 h-6" />,
-      color: "accent",
-      skills: [
-        { name: "PostgreSQL", level: 87, icon: "🐘" },
-        { name: "MongoDB", level: 83, icon: "🍃" },
-        { name: "AWS", level: 85, icon: "☁️" },
-        { name: "Docker", level: 88, icon: "🐳" },
-        { name: "Redis", level: 80, icon: "🔴" },
-      ],
-    },
-    {
-      title: "Mobile & Tools",
+      title: "Designing Tools",
       icon: <Smartphone className="w-6 h-6" />,
       color: "primary",
       skills: [

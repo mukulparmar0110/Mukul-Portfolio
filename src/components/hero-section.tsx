@@ -127,9 +127,9 @@ export const HeroSection = memo(function HeroSection() {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="/profile.jpg"
+                  src="/Profile1.jpg"
                   alt="Alex Developer - Professional portrait with futuristic lighting"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   loading="eager"
                   decoding="async"
                 />

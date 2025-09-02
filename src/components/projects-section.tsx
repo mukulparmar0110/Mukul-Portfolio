@@ -19,13 +19,26 @@ export const ProjectsSection = memo(function ProjectsSection() {
         description:
           "Maheshwari Visuals is a SaaS-based web app that connects artists and singers with platforms like Spotify and Apple Music, making music distribution seamless and efficient.",
         
-          image: "/card1.webp",
-        tech: ["Figma", "TypeScript", "D3.js", "OpenAI API", "PostgreSQL"],
+          image: "/maheshwari.png",
+        tech: ["Figma", "Adobe XD", "Lovable"],
         category: "Web Application",
         links: {
           demo: "https://www.figma.com/design/P5entoo6ou7kggGqZbvcMs/Maheshwari-Fresh?node-id=0-1&t=zgJ5JLNvwo08UgUX-1",
           github: "#",
-          live: "#",
+          live: "https://www.maheshwarivisuals.com/",
+        },
+      },
+      {
+        id: "TropoTrips",
+        title: "TropoTrips – Your Gateway to Unique Stays",
+        description: "A SaaS-based travel platform like Airbnb that connects travelers with unique stays, rentals, and experiences worldwide.",
+        image: "/tropotrips.png",
+        tech: ["Figma", "Adobe XD", "Lovable"],
+        category: "Web Application",
+        links: {
+          demo: "https://www.figma.com/design/YGAGn8AVTZML3PBBSRgAof/TropoTrips-Fresh?node-id=0-1&t=9zisRODQn0Snzolx-1",
+          github: "#",
+          live: "https://tropotrips.com/",
         },
       },
       {
@@ -33,67 +46,55 @@ export const ProjectsSection = memo(function ProjectsSection() {
         title: "Tiffix – Food Delivery SaaS Based App",
         description:
           "A SaaS-based platform that connects home chefs, vendors, and customers for subscription-based meal delivery.",
-        image: "/card2.webp",
+        image: "/tiffix.png",
         tech: ["Figma", "Adobe XD", "Lovable"],
-        category: "Full-Stack",
+        category: "Mobile App",
         links: {
           demo: "https://www.figma.com/design/5D3ZjX2I9KWoZnGkazfjCZ/Tiffix-Fresh?node-id=0-1&t=YxR87Z82mulIw4D2-1",
           github: "#",
-          live: "#",
+          live: "https://tiffix.in/",
         },
       },
+      
       {
-        id: "fitness-app",
-        title: "Mobile Fitness App",
-        description: "Cross-platform fitness tracking app with workout plans, progress analytics, and social features.",
-        image: "/card3.webp",
-        tech: ["React Native", "Firebase", "Redux", "Chart.js"],
-        category: "Mobile App",
-        links: {
-          demo: "#",
-          github: "#",
-          live: "#",
-        },
-      },
-      {
-        id: "blockchain-wallet",
-        title: "Blockchain Wallet",
+        id: "Rabt Naturals",
+        title: "Rabt Naturals – Beauty & Wellness E-Commerce",
         description:
-          "Secure cryptocurrency wallet with multi-chain support, DeFi integration, and advanced security features.",
-        image: "/card4.webp",
-        tech: ["Vue.js", "Web3.js", "Solidity", "MetaMask"],
-        category: "Blockchain",
+          "A SaaS-based e-commerce platform for natural beauty products, offering a seamless shopping experience with subscriptions and personalized care.",
+        image: "/rabt.png",
+        tech: ["Figma", "Adobe XD", "Lovable"],
+        category: "E-commerce web app",
         links: {
-          demo: "#",
+          demo: "https://www.figma.com/design/w7Zy2zyFefd35xv57UeP5z/Rabt-E-comm?node-id=0-1&t=UBem83OyVv1muRaA-1",
+          github: "#",
+          live: "https://rabtnaturals.com/",
+        },
+      },
+      {
+        id: "snek",
+        title: "Snek – Modern Dating Mobile App",
+        description: "A SaaS-based mobile dating app that helps people connect through smart matchmaking, real-time chat, and an engaging user experience.",
+        image: "/snek.png",
+        tech: ["Figma", "Adobe XD"],
+        category: "mobile App",
+        links: {
+          demo: "https://www.figma.com/design/FHx5cFwDkMWnJizaDSWuTE/Snek?node-id=0-1&t=cLh1WDq7sF51cxmj-1",
           github: "#",
           live: "#",
         },
       },
       {
-        id: "chat-platform",
-        title: "Real-Time Chat Platform",
-        description: "Scalable messaging platform with video calls, file sharing, and team collaboration features.",
-        image: "/card5.webp",
-        tech: ["Socket.io", "Express", "WebRTC", "AWS S3"],
-        category: "Real-Time App",
-        links: {
-          demo: "#",
-          github: "#",
-          live: "#",
-        },
-      },
-      {
-        id: "iot-monitoring",
-        title: "IoT Monitoring System",
+        id: "creatordesk",
+        title: "CreatorDesk – Instagram Automation Platform",
         description:
-          "Industrial IoT dashboard for monitoring sensors, managing devices, and analyzing environmental data.",
-        image: "/card5.webp",
-        tech: ["Python", "MQTT", "InfluxDB", "Grafana"],
-        category: "IoT Solution",
+          "A SaaS-based web app that automates Instagram growth with smart scheduling, analytics, and engagement tools for creators and brands.",
+        image: "/creatordesk.png",
+        tech: ["Figma", "Adobe XD", "Lovable"],
+        category: "Automation Web App",
         links: {
-          demo: "#",
+          demo: "https://www.figma.com/design/AFSX9iyCRBjh7e0afEeGN5/CreatorDesk-Edits?node-id=0-1&t=qGX4pbMx1npQXQqZ-1",
           github: "#",
-          live: "#",
+          live: "https://creatordesks.com/",
         },
       },
     ],
@@ -195,7 +196,7 @@ export const ProjectsSection = memo(function ProjectsSection() {
                   <motion.img
                     src={project.image}
                     alt={`${project.title} - ${project.description}`}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-50 object-cover transition-transform duration-500 group-hover:scale-110"
                     whileHover={{ scale: 1.05 }}
                     loading={index < 3 ? "eager" : "lazy"}
                     decoding="async"
@@ -272,16 +273,23 @@ export const ProjectsSection = memo(function ProjectsSection() {
                       </Button>
                     </motion.div> */}
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                      <Button
-                        size="sm"
-                        variant="ghost"
-                        className="neon-glow-hover"
-                        onClick={() => handleProjectAction("live", project.id)}
-                        aria-label={`View live version of ${project.title}`}
-                      >
-                        <ExternalLink className="w-4 h-4" aria-hidden="true" />
-                      </Button>
-                    </motion.div>
+                     <Button
+                       size="sm"
+                       variant="ghost"
+                       className="neon-glow-hover"
+                       asChild
+                     >
+                       <a
+                         href={project.links.live}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         aria-label={`View live version of ${project.title}`}
+                         className="flex items-center"
+                       >
+                         <ExternalLink className="w-4 h-4" aria-hidden="true" />
+                       </a>
+                     </Button>
+                   </motion.div>
                   </div>
                 </CardContent>
               </Card>
@@ -309,7 +317,6 @@ export const ProjectsSection = memo(function ProjectsSection() {
                   onClick={() => handleProjectAction("view-all", "portfolio")}
                   aria-label="View all projects on GitHub"
                 >
-                  <Github className="w-4 h-4 mr-2" aria-hidden="true" />
                   View All Projects
                 </Button>
               </motion.div>
