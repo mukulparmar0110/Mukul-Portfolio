@@ -102,7 +102,7 @@ export const Navbar = memo(function Navbar() {
 
           {/* Theme Toggle */}
           <div className="hidden md:block">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
 
           {/* Mobile menu button */}

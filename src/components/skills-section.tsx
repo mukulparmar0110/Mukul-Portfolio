@@ -28,15 +28,29 @@ export function SkillsSection() {
 
   const skillCategories = [
     {
+      title: "Designing Tools",
+      icon: <Smartphone className="w-6 h-6" />,
+      color: "primary",
+      skills: [
+        { name: "Figma", level: 99, icon: "🎨" },
+        { name: "Canva", level: 95, icon: "🧪" },
+        { name: "Adobe XD", level: 80, icon: "🎨" },
+        { name: "Git/GitHub", level: 90, icon: "🔀" },
+        { name: "Prototying", level: 80, icon: "⛓️‍💥" },
+        { name: "Lovable", level: 95, icon: "🚀" },
+      ],
+    },
+    {
+    
       title: "Frontend Development",
       icon: <Code2 className="w-6 h-6" />,
       color: "primary",
       skills: [
-        { name: "React/Next.js", level: 95, icon: "⚛️" },
-        { name: "TypeScript", level: 90, icon: "📘" },
-        { name: "Tailwind CSS", level: 92, icon: "🎨" },
-        { name: "Vue.js", level: 85, icon: "💚" },
-        { name: "Three.js", level: 78, icon: "🎮" },
+        { name: "React/Next.js", level: 75, icon: "⚛️" },
+        { name: "Flutter", level: 80, icon: "📘" },
+        { name: "HTML", level: 95, icon: "🎨" },
+        { name: "CSS", level: 95, icon: "💚" },
+        { name: "JS", level: 75, icon: "🎮" },
       ],
     },
     // {
@@ -63,18 +77,19 @@ export function SkillsSection() {
     //     { name: "Redis", level: 80, icon: "🔴" },
     //   ],
     // },
-    {
-      title: "Designing Tools",
-      icon: <Smartphone className="w-6 h-6" />,
-      color: "primary",
-      skills: [
-        { name: "React Native", level: 82, icon: "📱" },
-        { name: "Git/GitHub", level: 92, icon: "🔀" },
-        { name: "Figma", level: 85, icon: "🎨" },
-        { name: "Jest/Testing", level: 80, icon: "🧪" },
-        { name: "CI/CD", level: 78, icon: "🚀" },
-      ],
-    },
+    // {
+    //   title: "Designing Tools",
+    //   icon: <Smartphone className="w-6 h-6" />,
+    //   color: "primary",
+    //   skills: [
+    //     { name: "Figma", level: 95, icon: "🎨" },
+    //     { name: "Canva", level: 95, icon: "🧪" },
+    //     { name: "Adobe XD", level: 80, icon: "🎨" },
+    //     { name: "Git/GitHub", level: 90, icon: "🔀" },
+    //     { name: "Prototying", level: 80, icon: "⛓️‍💥" },
+    //     { name: "Lovable", level: 95, icon: "🚀" },
+    //   ],
+    // },
   ]
 
   const containerVariants = {
@@ -215,7 +230,7 @@ export function SkillsSection() {
         </motion.div>
 
         {/* Additional Skills Icons */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -248,7 +263,7 @@ export function SkillsSection() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Learning Philosophy */}
         <motion.div
@@ -259,11 +274,10 @@ export function SkillsSection() {
         >
           <Card className="glass-card neon-border max-w-4xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 neon-text">Continuous Learning</h3>
+              <h3 className="text-2xl font-bold mb-4 neon-text">Learning never stops, it just evolves</h3>
               <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
-                Technology evolves rapidly, and so do I. I'm constantly exploring new frameworks, tools, and
-                methodologies to stay at the forefront of web development. Currently diving deep into AI integration,
-                Web3 technologies, and advanced performance optimization techniques.
+                I strongly believe in continuous learning – upgrading my skills with the latest tools, frameworks, and design trends. 
+                From UI/UX design to modern web technologies, I keep exploring, experimenting, and implementing new knowledge in real-world projects.
               </p>
             </CardContent>
           </Card>
