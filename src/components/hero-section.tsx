@@ -106,10 +106,11 @@ export const HeroSection = memo(function HeroSection() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               variants={itemVariants}
             >
-              <GlowingButton variant="default" size="lg" className="group" aria-label="Contact me via email">
-                <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
+              <Button variant="default" size="lg">
+                <Mail className="h-5 w-5" />
                 Get In Touch
-              </GlowingButton>
+              </Button>
+
 
               {/* <GlowingButton variant="secondary" size="lg" className="group" aria-label="Download my CV">
                 <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />

@@ -381,17 +381,20 @@ export function ContactSection() {
                       disabled={isSubmitting}
                       className="w-full group"
                     >
-                      {isSubmitting ? (
-                        <motion.div
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                          className="w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-2"
-                        />
-                      ) : (
-                        <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                      )}
-                      {isSubmitting ? "Sending..." : "Send Message"}
+                      <span className="flex items-center gap-2">
+                        {isSubmitting ? (
+                          <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                            className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                          />
+                        ) : (
+                          <Send className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                        )}
+                        {isSubmitting ? "Sending..." : "Send Message"}
+                      </span>
                     </GlowingButton>
+
                   </form>
                 )}
               </CardContent>
