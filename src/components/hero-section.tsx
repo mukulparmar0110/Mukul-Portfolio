@@ -80,21 +80,38 @@ export const HeroSection = memo(function HeroSection() {
           animate="visible"
         >
           {/* Left side - Text content */}
-          <motion.div className="flex-1 text-center lg:text-left" variants={itemVariants}>
-            <motion.div variants={itemVariants} className="mb-4">
-              <span className="text-primary text-lg font-medium">Hello, I'm</span>
-            </motion.div>
+          <motion.div
+             className="flex-1 text-center lg:text-left mt-20 md:mt-24 lg:mt-28" // changed pt -> mt
+             variants={itemVariants}
+           >
+             <motion.div variants={itemVariants} className="mb-4">
+               <span className="text-primary text-lg font-medium">Hello, I'm</span>
+             </motion.div>
+           
+             <motion.h1
+               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance"
+               variants={itemVariants}
+             >
+               <span className="neon-text">Mukul Parmar</span>{" "}
+               <span className="text-foreground">Designer</span>
+             </motion.h1>
+           
+             <motion.div
+               className="mb-8 text-xl md:text-2xl text-muted-foreground"
+               variants={itemVariants}
+             >
+               <TypewriterText
+                 texts={[
+                   "UI/UX Designer",
+                   "SaaS Designer",
+                   "Prompt Engineer",
+                   "Frontend Developer",
+                 ]}
+                 delay={1000}
+               />
+             </motion.div>
 
-            <motion.h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance" variants={itemVariants}>
-              <span className="neon-text">Mukul Parmar</span> <span className="text-foreground">Designer</span>
-            </motion.h1>
 
-            <motion.div className="mb-8 text-xl md:text-2xl text-muted-foreground" variants={itemVariants}>
-              <TypewriterText
-                texts={["UI/UX Designer", "SaaS Designer", "Prompt Engineer", "Frontend Developer"]}
-                delay={1000}
-              />  
-            </motion.div>
 
             <motion.p className="text-lg text-muted-foreground mb-8 max-w-2xl text-pretty" variants={itemVariants}>
               Design, for me, is the perfect balance between aesthetic elegance and functional clarity. 
