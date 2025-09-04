@@ -13,7 +13,7 @@ export const AboutSection = memo(function AboutSection() {
   const timelineData = useMemo(
     () => [
        {
-        year: "2025",
+        year: "2023",
         title: "UI/UX Designer",
         company: "FutureDesk Services",
         description: "Designed user-centered digital experiences and prototyped innovative interface solutions.",
@@ -21,7 +21,7 @@ export const AboutSection = memo(function AboutSection() {
         skills: ["Figma", "Adobe XD", "Canva", "SaaS App", "Prototyping", "User Research"],
       },
       {
-        year: "2024",
+        year: "2023",
         title: "Frontend Developer",
         company: "Nestlytics",
         description:
