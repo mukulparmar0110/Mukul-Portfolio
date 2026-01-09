@@ -13,7 +13,7 @@ export const AboutSection = memo(function AboutSection() {
   const timelineData = useMemo(
     () => [
        {
-        year: "2023",
+        year: "Feb 2023 - Oct 2025",
         title: "UI/UX Designer",
         company: "FutureDesk Services",
         description: "Designed user-centered digital experiences and prototyped innovative interface solutions.",
@@ -21,21 +21,12 @@ export const AboutSection = memo(function AboutSection() {
         skills: ["Figma", "Adobe XD", "Canva", "SaaS App", "Prototyping", "User Research"],
       },
       {
-        year: "2023",
-        title: "Frontend Developer",
-        company: "Nestlytics",
-        description:
-          "Specialized in creating responsive, accessible user interfaces with focus on performance optimization.",
-        icon: <Code className="w-6 h-6" aria-hidden="true" />,
-        skills: ["Flutter","React", "HTML", "CSS"],
-      },
-      {
-        year: "2023 to 2027",
-        title: "Pursuing Bachelor of Computer Science",
+        year: "2020 to 2022 (Dropout)",
+        title: "Bachelor of Computer Science",
         company: "DR. Bhimrao Ambedkar University",
-        description: "Pursuing a Bachelor of Computer Science with a passion for UI/UX, development, and creating meaningful digital experiences.",
+        description: "Bachelor of Computer Science with a passion for UI/UX, development, and creating meaningful digital experiences.",
         icon: <Users className="w-6 h-6" aria-hidden="true" />,
-        skills: ["Algorithms", "Data Structures", "Software Engineering", "HCI"],
+        skills: ["Algorithms", "Data Structures", "Software Engineering"],
       },
     ],
     [],
